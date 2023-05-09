@@ -11,6 +11,7 @@
     "jquery": "^3.6.0"
   },
   "devDependencies": {
+    "@babel/register": "^7.21.0",
     "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
