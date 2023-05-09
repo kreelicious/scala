@@ -1,0 +1,54 @@
+
+// Hero Element
+// --------------
+
+.hero {
+    background-position: center center;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.5)), url("../img/hero1.jpg");
+}
+.hero-content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h2 {
+        font-size: 150px;
+        @include breakpoint(medium down) {
+            font-size: 90px;
+            line-height: 0.9em;
+          }
+    }
+    p {
+        color: $primary-color;
+        font-family: amithen, Arial, Helvetica, sans-serif;
+        font-size: 80px;
+        margin:0;
+        line-height: 0em;
+        @include breakpoint(medium down) {
+            font-size: 25px;
+            line-height: 0.7em;
+          }
+    }
+}
+
+// signup section
+.signup {
+   background-color: $primary-color;
+   padding: 1em;
+}
+
+.signup-button {
+    
+}
+
+
+// Upcoming Events
+.upcoming-events {
+    background-color: $black; 
+ }
+  

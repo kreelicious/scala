@@ -1,8 +1,15 @@
 @charset 'utf-8';
 
 @import 'settings';
+@import 'components/typography.scss';
 @import 'foundation';
 @import 'motion-ui';
+@import 'components/nav.scss';
+@import 'components/footer.scss';
+@import 'pages/home.scss';
+@import 'pages/event-page.scss';
+@import 'pages/venue.scss';
+@import 'components/elements.scss';
 
 // Global styles
 @include foundation-global-styles;

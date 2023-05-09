@@ -8,11 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f5d1ef23a1.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6457bdd3e7800d0019030235&product=inline-share-buttons&source=platform" async="async"></script>
+
   </head>
 <body>
 
-{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+  
+{{> navigation}}
 {{> body}}
+{{> footer}}
 
 <script src="{{root}}assets/js/app.js"></script>
 </body>

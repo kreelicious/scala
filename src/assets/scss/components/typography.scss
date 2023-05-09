@@ -1,0 +1,27 @@
+//Fonts
+@font-face {
+    font-family: "amithen";
+    src: url("../fonts/amithen-webfont.woff2")  format('woff');
+  }
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+.tagline {
+    color: $primary-color;
+    font-family: amithen, Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    margin:0;
+    line-height: 0em;
+    @include breakpoint(medium down) {
+        font-size: 45px;
+        line-height: 0.7em;
+    }
+}
+span.orange{
+    color: $primary-color;
+}
+span.black{
+    color: $black;
+}
+

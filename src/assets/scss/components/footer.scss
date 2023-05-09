@@ -1,0 +1,39 @@
+footer {
+  padding: 2em 0; 
+}
+.footer-top {
+  padding: 1em 0;
+
+}
+.footer-bottom {
+  border-top: 1px solid white;
+  padding: 1em 0;
+
+}
+
+.social-footer {
+  padding: 1rem;
+  background: $black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid white;
+
+  .social-footer-icons {
+    li:last-of-type {
+      margin-right: 0;
+    }
+
+    .fa {
+      font-size: 1.3rem;
+      color: $white;
+
+      &:hover {
+        color: darken($dark-gray, 25%);
+        transition: color 0.3s ease-in;
+      }
+    }
+  }
+}
+
+
