@@ -1,0 +1,8 @@
++ what-input@5.2.12
+added 1 package from 1 contributor and audited 762 packages in 4.18s
+
+31 packages are looking for funding
+  run `npm fund` for details
+
+found 2 high severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
