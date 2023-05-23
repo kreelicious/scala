@@ -10,14 +10,18 @@
   "author": "Foundation Yetinauts <contact@get.foundation> (https://get.foundation)",
   "license": "Scala",
   "dependencies": {
+    "dateformat": "^5.0.3",
     "foundation-sites": "latest",
     "jquery": "^3.6.0",
     "motion-ui": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "what-input": "^5.2.10"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.18.6",
     "@babel/register": "^7.15.3",
     "autoprefixer": "^10.3.4",
     "babel-loader": "^8.2.2",
@@ -42,6 +46,7 @@
     "panini": "latest",
     "postcss": "^8.3.11",
     "postcss-uncss": "^0.17.0",
+    "process": "0.11.10",
     "rimraf": "^3.0.2",
     "style-sherpa": "^1.0.2",
     "uncss": "^0.17.3",

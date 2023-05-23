@@ -1,0 +1,14 @@
+{
+  "development": {
+    "STRAPI_API_KEY": "d9783bcf0a44651d93fbfcf48534121de1963818654d7a6b1a694296a8de17e171989199eb80f9c31199f9a93e9d9cb3f4153fa4dc7f44c44d421f8b288917d4cf6852a1c7fd71185d57803362f4eaa8f414c54df8072f38f341d2d47b7088c6adcdb916a775d8cb5b413ecb1fe39012f3d8bb6a31c292bf591bc35b4aace681",
+    "STRAPI_BASE_URL": "http://localhost:1337",
+    "STRAPI_API_URL": "http://localhost:1337/api",
+    "DIGITAL_OCEAN_SPACE_ENDPOINT": "https://scala-files.ams3.digitaloceanspaces.com"
+  },
+  "production": {
+    "STRAPI_API_KEY": "",
+    "STRAPI_BASE_URL": "",
+    "STRAPI_API_URL": "",
+    "DIGITAL_OCEAN_SPACE_ENDPOINT": "https://scala-files.ams3.digitaloceanspaces.com"
+  }
+}

@@ -43,3 +43,7 @@ function navLinkClick() {
     navToggler.click();
   }
 }
+
+import './index'
+import './events'
+import './event-page'
