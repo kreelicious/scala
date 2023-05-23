@@ -6,9 +6,9 @@
     "DIGITAL_OCEAN_SPACE_ENDPOINT": "https://scala-files.ams3.digitaloceanspaces.com"
   },
   "production": {
-    "STRAPI_API_KEY": "",
-    "STRAPI_BASE_URL": "",
-    "STRAPI_API_URL": "",
+    "STRAPI_API_KEY": "09adfe947cd9146eeb623a127a50e34f455e4a10f3cca3109adb661200c67f70de0e7199583999c76b5dddd0df8550ee5e0c18aeb4fa0139850304ac51e473a6fee5bbe2b0a754f84869e894ab94cc88d5606f52274c0dc412d3f43888efe870de9f68b082fb4634d3f06e193fa63f66c6d4edb2e6a513126cd0266bfc2f1f24",
+    "STRAPI_BASE_URL": "https://scala-api.herokuapp.com",
+    "STRAPI_API_URL": "https://scala-api.herokuapp.com/api",
     "DIGITAL_OCEAN_SPACE_ENDPOINT": "https://scala-files.ams3.digitaloceanspaces.com"
   }
 }
