@@ -1,5 +1,5 @@
 import React from "react";
-import { posterImageUrl } from "../helpers/eventHelper";
+import { bannerImageUrl } from "../helpers/eventHelper";
 
 function Event({ event }) {
   
@@ -18,7 +18,7 @@ function Event({ event }) {
     <div key={`event_${event.id}`} className="cell">
       <div className="card event align-stretch">
         { event.attributes.Poster.data && 
-          <img src={posterImageUrl(event.attributes.Poster)} />
+          <img src={bannerImageUrl(event.attributes.Banner)} />
         }
         <div className="card-section">
           <h3>{event.attributes.Title}</h3>
