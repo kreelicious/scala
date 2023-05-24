@@ -17,7 +17,7 @@ function Event({ event }) {
   return (
     <div key={`event_${event.id}`} className="cell">
       <div className="card event align-stretch">
-        { event.attributes.Poster.data && 
+        { event.attributes.Banner.data && 
           <img src={bannerImageUrl(event.attributes.Banner)} />
         }
         <div className="card-section">
