@@ -7,6 +7,8 @@ const EventBriteWidget = ({ eventId }) => {
   };
 
   useEffect(() => {
+    if(eventId){
+     
     window.EBWidgets.createWidget({
       widgetType: 'checkout',
       eventId: eventId,
@@ -14,7 +16,9 @@ const EventBriteWidget = ({ eventId }) => {
       iframeContainerHeight: 425,
       onOrderComplete: exampleCallback,
     });
-  }, [])
+    }
+  }, [eventId])
+  
   
   return (
     <div id="example-widget-trigger"></div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import apiFetch from "../lib/fetch";
 import dateFormat from "dateformat";
+import ReactMarkdown from "react-markdown";
 import { bannerImageUrl, posterImageUrl } from "../helpers/eventHelper";
 import EventBriteCheckout from "./EventBriteCheckout";
 
@@ -11,7 +12,7 @@ function EventDetails({ eventId }) {
     apiFetch(`/events/${eventId}?populate=*`)
       .then((response) => response.json())
       .then((json) => {
-        console.log(json.data);
+        //console.log(json.data);
         setEvent(json.data);
       })
       .catch((error) => {
@@ -78,18 +79,19 @@ function EventDetails({ eventId }) {
               </div>
 
               <hr />
-              <p>
-                { event.attributes.DescriptionHtml}
-              </p>
+              <div>
+              <ReactMarkdown>{ event.attributes.DescriptionHtml}</ReactMarkdown>
+              </div>
               <hr />
-              <br />
+             
               <div className="sharethis-inline-share-buttons"></div>
+              <br />
             </div>
             <div className="cell large-4">
               <div className="card">
                 { event.attributes.EventbriteId && 
                   <div>
-                    <EventBriteCheckout eventId={event.attributes.EventBriteId } />
+                    <EventBriteCheckout eventId={ event.attributes.EventbriteId } />
                   </div>
                 }
                 { event.attributes.Poster.data && 
