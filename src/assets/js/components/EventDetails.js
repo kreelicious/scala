@@ -73,7 +73,7 @@ function EventDetails({ eventId }) {
               </div>
               <div className="cell">
                 <p>
-                  <i className="fa-regular fa-location-dot"></i> The Scala,
+                  <i className="fa-regular fa-location"></i> The Scala,
                   Merthyr Tydfil
                 </p>
               </div>
