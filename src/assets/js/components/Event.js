@@ -1,5 +1,5 @@
 import React from "react";
-import { bannerImageUrl } from "../helpers/eventHelper";
+import { bannerImageUrl, formattedDate, formattedTime } from "../helpers/eventHelper";
 
 function Event({ event }) {
   
@@ -22,7 +22,9 @@ function Event({ event }) {
         }
         <div className="card-section">
           <h3>{event.attributes.Title}</h3>
-          <p>{truncateString(event.attributes.DescriptionText, 120)}</p>
+          <div><strong>On {formattedDate(event.attributes.StartAt)}</strong> </div>
+          <div><small>From {formattedTime(event.attributes.StartAt, event.attributes.EndAt)}</small></div>
+          <br />
           <p>
             <a href={`event-page.html?eventId=${event.id}`} className="button primary medium">
               MORE INFO

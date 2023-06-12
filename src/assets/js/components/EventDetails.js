@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import apiFetch from "../lib/fetch";
-import dateFormat from "dateformat";
+//import dateFormat from "dateformat";
 import ReactMarkdown from "react-markdown";
-import { bannerImageUrl, posterImageUrl } from "../helpers/eventHelper";
+import { bannerImageUrl, posterImageUrl, formattedDate, formattedTime } from "../helpers/eventHelper";
 import EventBriteCheckout from "./EventBriteCheckout";
 
 function EventDetails({ eventId }) {
@@ -19,19 +19,6 @@ function EventDetails({ eventId }) {
         console.error(error);
       });
   }, []);
-
-  const formattedDate = (input) => {
-    return dateFormat(input, 'fullDate');
-  }
-
-  const formattedTime = (from, to) => {
-    const fromTime = dateFormat(from, 'h:MM TT')
-    let toTime = 'till late'
-    if(to){
-      toTime = `to ${dateFormat(to, 'h:MM TT')}`
-    }
-    return `${fromTime} ${toTime}`
-  }
 
   return (
     <>

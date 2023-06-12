@@ -1,4 +1,5 @@
 import { env } from "../config";
+import dateFormat from "dateformat";
 
 export const posterImageUrl = (poster) => {
   const posterImg = poster.data.attributes.formats.small
@@ -18,4 +19,17 @@ export const bannerImageUrl = (banner) => {
     return `${env('STRAPI_BASE_URL')}${bannerImg.url}`
   }
   
+}
+
+export const formattedDate = (input) => {
+  return dateFormat(input, 'fullDate');
+}
+
+export const formattedTime = (from, to) => {
+  const fromTime = dateFormat(from, 'h:MM TT')
+  let toTime = 'till late'
+  if(to){
+    toTime = `to ${dateFormat(to, 'h:MM TT')}`
+  }
+  return `${fromTime} ${toTime}`
 }
