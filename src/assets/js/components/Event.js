@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { bannerImageUrl, formattedDate, formattedTime } from "../helpers/eventHelper";
 
 function Event({ event }) {
@@ -26,9 +27,9 @@ function Event({ event }) {
           <div><small>From {formattedTime(event.attributes.StartAt, event.attributes.EndAt)}</small></div>
           <br />
           <p>
-            <a href={`event-page.html?eventId=${event.id}`} className="button primary medium">
+            <Link to={`/event/${event.id}`} className="button primary medium">
               MORE INFO
-            </a>
+            </Link>
           </p>
         </div>
       </div>

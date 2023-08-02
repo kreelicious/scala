@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import apiFetch from "../lib/fetch";
 import Event from "./Event";
 
@@ -21,7 +22,11 @@ const EventList = () => {
       });
   }, []);
 
-  return events.map((event) => <Event key={event.id} event={event} />);
+  return events.map((event) => (
+    <Link key={event.id} to={`/event/${event.id}`}>
+      <Event event={event} />
+    </Link>
+  ));
 };
 
 export default EventList;
