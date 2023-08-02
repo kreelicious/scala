@@ -10,8 +10,10 @@ const EventList = () => {
       .then((response) => response.json())
       .then((json) => {
         console.log(json.data);
-        .filter(event => new Date(event.attributes.StartAt) >= currentDate)
-        .sort((a, b) => new Date(a.date) - new Date(b.date));
+        const currentDate = new Date();
+        const sortedAndFilteredEvents = json.data
+          .filter(event => new Date(event.attributes.StartAt) >= currentDate)
+          .sort((a, b) => new Date(a.attributes.StartAt) - new Date(b.attributes.StartAt));
         setEvents(sortedAndFilteredEvents);
       })
       .catch((error) => {
