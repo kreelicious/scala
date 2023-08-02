@@ -10,14 +10,16 @@ const EventList = () => {
       .then((response) => response.json())
       .then((json) => {
         console.log(json.data);
-        setEvents(json.data);
+        .filter(event => new Date(event.attributes.StartAt) >= currentDate)
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
+        setEvents(sortedAndFilteredEvents);
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
 
-  return events.map((event) => <Event event={event} />);
+  return events.map((event) => <Event key={event.id} event={event} />);
 };
 
 export default EventList;
