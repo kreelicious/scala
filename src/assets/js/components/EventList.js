@@ -6,10 +6,9 @@ import PropTypes from 'prop-types';
 
 const EventList = ({limit}) => {
   const [events, setEvents] = useState([]);
-  const PAGE_SIZE = 200;
 
   useEffect(() => {
-    apiFetch(`/events?pagination[limit]=${limit}&pagination[${PAGE_SIZE}]=200&populate=*`)
+    apiFetch(`/events?pagination[pageSize]=${limit}&populate=*`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json.data);
@@ -37,7 +36,7 @@ EventList.propTypes = {
 };
 
 EventList.defaultProps = {
-  limit: 30,
+  limit: 200,
 };
 
 export default EventList;
