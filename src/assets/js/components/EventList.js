@@ -17,7 +17,7 @@ const EventList = ({ offset, limit, showPagination }) => {
   const getNextPage = () => {
     const currentDate = moment().format("YYYY-MM-DD");
     apiFetch(
-      `/events?publicationState=live&filters[StartAt][$gte]=${currentDate}&pagination[start]=${pageOffset.current}&pagination[limit]=${limit}&populate=*`
+      `/events?publicationState=live&filters[StartAt][$gte]=${currentDate}&pagination[start]=${pageOffset.current}&pagination[limit]=${limit}&sort=StartAt&populate=*`
     )
       .then((response) => {
         return response.json();
@@ -41,11 +41,17 @@ const EventList = ({ offset, limit, showPagination }) => {
 
   return (
     <>
-      {events.map((event) => (
-        <a key={event.id} href={`/event-page.html?eventId=${event.id}`}>
-          <Event event={event} />
-        </a>
-      ))}
+      <div class="grid-x grid-margin-x medium-up-3 align-stretch">
+        {events.map((event) => (
+          <a
+            className="cell"
+            key={event.id}
+            href={`/event-page.html?eventId=${event.id}`}
+          >
+            <Event event={event} />
+          </a>
+        ))}
+      </div>
 
       {showPagination && hasMorePages && (
         <div className="grid-container text-center">
