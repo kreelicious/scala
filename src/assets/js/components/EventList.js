@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import apiFetch from "../lib/fetch";
 import Event from "./Event";
+import PropTypes from 'prop-types';
 
-const EventList = () => {
+const EventList = ({limit}) => {
   const [events, setEvents] = useState([]);
+  const PAGE_SIZE = 200;
 
   useEffect(() => {
-    apiFetch("/events?populate=*")
+    apiFetch(`/events?pagination[limit]=${limit}&pagination[${PAGE_SIZE}]=200&populate=*`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json.data);
@@ -27,6 +29,11 @@ const EventList = () => {
       <Event event={event} />
     </Link>
   ));
+};
+
+
+EventList.propTypes = {
+  limit: PropTypes.number,
 };
 
 export default EventList;

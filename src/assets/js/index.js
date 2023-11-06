@@ -6,7 +6,7 @@ import EventList from "./components/EventList";
 let container = document.getElementById("index-events-container");
 if(container){
     const root = createRoot(container);
-    root.render(<EventList />);
+    root.render(<EventList limit={6} />);
 }
 
 function App() {
