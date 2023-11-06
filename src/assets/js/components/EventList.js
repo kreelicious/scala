@@ -38,7 +38,7 @@ const EventList = ({ offset, limit, showPagination }) => {
   };
 
   return (
-    <div>
+    <>
       {events.map((event) => (
         <a key={event.id} href={`/event/${event.id}`}>
           <Event event={event} />
@@ -56,7 +56,7 @@ const EventList = ({ offset, limit, showPagination }) => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
