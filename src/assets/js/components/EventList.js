@@ -4,7 +4,7 @@ import apiFetch from "../lib/fetch";
 import Event from "./Event";
 //import PropTypes from 'prop-types';
 
-const EventList = ({limit}) => {
+const EventList = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
