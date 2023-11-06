@@ -36,4 +36,8 @@ EventList.propTypes = {
   limit: PropTypes.number,
 };
 
+EventList.defaultProps = {
+  limit: 30,
+};
+
 export default EventList;
