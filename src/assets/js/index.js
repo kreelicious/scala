@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import EventList from "./components/EventList";
+import Event from "./components/Event";
 
 let container = document.getElementById("index-events-container");
 if(container){

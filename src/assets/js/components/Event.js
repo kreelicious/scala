@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   bannerImageUrl,
   formattedDate,
@@ -39,7 +38,7 @@ function Event({ event }) {
           </div>
           <br />
           <p>
-            <button href={`/event/${event.id}`} className="button primary medium">
+            <button href={`/event-page.html?eventId=${event.id}`} className="button primary medium">
               MORE INFO
             </button>
           </p>

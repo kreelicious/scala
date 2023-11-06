@@ -1,9 +1,9 @@
 {
   "development": {
-    "STRAPI_API_KEY": "d9783bcf0a44651d93fbfcf48534121de1963818654d7a6b1a694296a8de17e171989199eb80f9c31199f9a93e9d9cb3f4153fa4dc7f44c44d421f8b288917d4cf6852a1c7fd71185d57803362f4eaa8f414c54df8072f38f341d2d47b7088c6adcdb916a775d8cb5b413ecb1fe39012f3d8bb6a31c292bf591bc35b4aace681",
-    "STRAPI_BASE_URL": "http://localhost:1337",
-    "STRAPI_API_URL": "http://localhost:1337/api",
-    "DIGITAL_OCEAN_SPACE_ENDPOINT": "https://scala-files.ams3.digitaloceanspaces.com"
+    "STRAPI_API_KEY": "09adfe947cd9146eeb623a127a50e34f455e4a10f3cca3109adb661200c67f70de0e7199583999c76b5dddd0df8550ee5e0c18aeb4fa0139850304ac51e473a6fee5bbe2b0a754f84869e894ab94cc88d5606f52274c0dc412d3f43888efe870de9f68b082fb4634d3f06e193fa63f66c6d4edb2e6a513126cd0266bfc2f1f24",
+    "STRAPI_BASE_URL": "https://scala-api.herokuapp.com",
+    "STRAPI_API_URL": "https://scala-api.herokuapp.com/api",
+    "DIGITAL_OCEAN_SPACE_ENDPOINT": "https://scala-files.ams3.digitaloceanspaces.com" 
   },
   "production": {
     "STRAPI_API_KEY": "09adfe947cd9146eeb623a127a50e34f455e4a10f3cca3109adb661200c67f70de0e7199583999c76b5dddd0df8550ee5e0c18aeb4fa0139850304ac51e473a6fee5bbe2b0a754f84869e894ab94cc88d5606f52274c0dc412d3f43888efe870de9f68b082fb4634d3f06e193fa63f66c6d4edb2e6a513126cd0266bfc2f1f24",

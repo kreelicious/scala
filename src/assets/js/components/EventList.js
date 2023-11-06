@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import apiFetch from "../lib/fetch";
 import Event from "./Event";
 import PropTypes from "prop-types";
@@ -22,6 +23,7 @@ const EventList = ({ offset, limit, showPagination }) => {
         return response.json();
       })
       .then((json) => {
+        console.log(json.data);
         const sortedEvents = json.data.sort(
           (a, b) =>
             new Date(a.attributes.StartAt) - new Date(b.attributes.StartAt)
@@ -40,15 +42,15 @@ const EventList = ({ offset, limit, showPagination }) => {
   return (
     <>
       {events.map((event) => (
-        <a key={event.id} href={`/event/${event.id}`}>
+        <a key={event.id} href={`/event-page.html?eventId=${event.id}`}>
           <Event event={event} />
         </a>
       ))}
 
       {showPagination && hasMorePages && (
-        <div class="grid-container text-center">
-          <div class="grid-x">
-            <div class="cell">
+        <div className="grid-container text-center">
+          <div className="grid-x">
+            <div className="cell">
               <button className="button primary medium" onClick={getNextPage}>
                 LOAD MORE
               </button>
