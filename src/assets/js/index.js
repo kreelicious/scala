@@ -6,6 +6,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import EventList from "./components/EventList";
 import Event from "./components/Event";
 
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-NCJ7P9TW'
+}
+
+TagManager.initialize(tagManagerArgs)
+
 let container = document.getElementById("index-events-container");
 if(container){
     const root = createRoot(container);

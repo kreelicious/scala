@@ -17,6 +17,7 @@
     "motion-ui": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-gtm-module": "latest",
     "react-markdown": "^8.0.7",
     "react-router-dom": "^6.18.0",
     "what-input": "^5.2.10"
