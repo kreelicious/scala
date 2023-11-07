@@ -32,7 +32,7 @@ const EventList = ({ offset, limit, showPagination }) => {
         const paginationMeta = json.meta.pagination;
         pageOffset.current = paginationMeta.start + paginationMeta.limit;
         console.log(paginationMeta);
-        setHasMorePages(pageOffset.current <= paginationMeta.total);
+        setHasMorePages(pageOffset.current < paginationMeta.total);
       })
       .catch((error) => {
         console.error(error);
