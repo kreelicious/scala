@@ -76,7 +76,7 @@ EventList.propTypes = {
 
 EventList.defaultProps = {
   limit: 10,
-  offset: 1,
+  offset: 0,
   showPagination: true,
 };
 
